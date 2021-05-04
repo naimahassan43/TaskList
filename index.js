@@ -22,4 +22,8 @@ document.querySelector('.task-list').addEventListener('click', e => {
     if (e.target.className.includes('task__op_delete')) {
         ui.deleteTask(e);
     }
+
+    if (e.target.className.includes('task-check')) {
+        ui.completeTask(e);
+    }
 })
