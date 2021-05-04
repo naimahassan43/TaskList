@@ -1,6 +1,12 @@
+import LS from './LS.js';
+
 function UI() {}
 
+const ls = new LS();
+
 UI.prototype.addToUI = function(task) {
+    ls.storeTask(task);
+
     let newHtml = `
   <div class="task" data-createdat="${task.id}">
   <div class="task__details">
