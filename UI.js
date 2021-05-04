@@ -20,5 +20,11 @@ UI.prototype.addToUI = function(task) {
 
 UI.prototype.resetForm = function() {
     document.querySelector('#newtaskID').value = '';
+};
+
+UI.prototype.deleteTask = function(e) {
+    const task = e.target.parentElement.parentElement;
+    task.remove();
+
 }
 export default UI;
