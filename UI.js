@@ -30,6 +30,8 @@ UI.prototype.resetForm = function() {
 
 UI.prototype.deleteTask = function(e) {
     const task = e.target.parentElement.parentElement;
+    const id = task.dataset.createdat;
+    ls.deleteTask(id);
     task.remove();
 }
 
