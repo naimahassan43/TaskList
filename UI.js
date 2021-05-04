@@ -76,5 +76,20 @@ UI.prototype.editTask = function(e) {
 
     document.querySelector('.EditTaskBtn').style.display = 'inline';
     document.querySelector('.CancelTaskBtn').style.display = 'inline';
-}
+};
+
+UI.prototype.updateTask = function(e) {
+    const taskId = document.querySelector('#updateTaskId').value;
+    const taskTitle = document.querySelector('#newtaskID').value;
+    const tasks = document.querySelectorAll('.task-title');
+
+
+    if (taskTitle.length > 0) {
+        tasks.forEach(title => {
+            if (title.parentElement.parentElement.dataset.createdat === taskId) {
+                title.innerText = taskTitle;
+            }
+        });
+    };
+};
 export default UI;
